@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+for dir in */.git; do
+  repo="${dir%/.git}"
+  echo "Pulling in $repo..."
+  (cd "$repo" && git pull)
+done
+
