@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+COMMAND="${1:-list}"
+INSTANCE_ID="$2"
+
+function list() {
+  aws ec2 describe-instances \
+    --query "Reservations[*].Instances[*].[InstanceId, State.Name, Tags[?Key==\`Name\`].Value | [0]]" \
+    --output table
+}
+
+function start() {
+  ec2_action "start-instances"
+}
+
+function stop() {
+  ec2_action "stop-instances"
+}
+
+function ec2_action() {
+  if [ -z "$INSTANCE_ID" ]; then
+    echo "Error: INSTANCE_ID is required for the '${COMMAND}' command" >&2
+    exit 1
+  fi
+  aws ec2 "$1" --instance-ids "$INSTANCE_ID" --output table
+}
+
+# Check if the command exists and execute it
+if type "$COMMAND" >/dev/null 2>&1; then
+  "$COMMAND"
+else
+  echo "Error: Unknown command '$COMMAND'" >&2
+  exit 1
+fi
+
