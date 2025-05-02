@@ -12,7 +12,7 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 # Fix rails test errors
 # https://github.com/rails/rails/issues/38560
 # Try removing when ruby 3.2.0 is updated
-# Renabled for problems running parallel tests with ruby 3.4.2 on 4/10/25
+# Re-nabled for problems running parallel tests with ruby 3.4.2 on 4/10/25
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Set EDITOR to Visual Studio Code
@@ -31,5 +31,5 @@ alias migrate="bin/rails db:migrate"
 alias paprika="open -n /Applications/Paprika\ Recipe\ Manager\ 3.app/"
 alias rc="bin/rubocop"
 alias rt="bin/rails test"
+alias rta="bin/rails test:all"
 alias rtc="rt;rc"
-
