@@ -43,3 +43,8 @@ alias rc="bin/rubocop"
 alias rt="bin/rails test"
 alias rta="bin/rails test:all"
 alias rtc="rt;rc"
+
+# Enable Docker CLI completions
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
