@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+printf "Change master branch to main? (y/n): "
+read -r response
+if [ "$response" != "y" ]; then
+  echo "Nothing done."
+  exit 1
+fi
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+git remote prune origin
+echo "Default branch renamed to main."
