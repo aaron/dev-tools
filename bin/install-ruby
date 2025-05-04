@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+if [ -z "$1" ]; then
+  echo "Error: Ruby version is required as the first argument." >&2
+  exit 1
+fi
+RUBY_VERSION="$1"
+
+echo "Installing Ruby version $RUBY_VERSION..."
+brew update
+brew upgrade
+rustup update
+RUBY_CONFIGURE_OPTS="--disable-install-doc" rbenv install "$RUBY_VERSION"
+rbenv rehash
+rbenv global "$RUBY_VERSION"
+gem update --system
+rbenv versions
