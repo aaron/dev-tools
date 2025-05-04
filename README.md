@@ -1,10 +1,20 @@
 # Personal Development Tools
+Environment setup and configuration files for Ruby on Rails development on macOS.
+
+## Dotfiles
+
 Add the following to ~/.zshrc:
 
 ```sh
 # Load dev-tools zshrc
 source "$HOME/git/dev-tools/dotfiles/.zshrc"
 ```
+
+Symlink Dotfiles
+- `~/.config/alacritty/alacritty.toml`
+- `~/.config/zellij/config.kdl`
+- `~/.gemrc`
+- `~/.gitignore_global`
 
 ## Environment Setup
 
