@@ -1,7 +1,12 @@
 #!/usr/bin/env sh
 
+# Install Homebrew packages
 brew install git
 brew install gh
 brew install --cask alacritty
 brew install --cask font-caskaydia-mono-nerd-font
 brew install zellij
+
+# Add global git configs
+git config --global init.defaultBranch main
+git config --global pull.rebase false
