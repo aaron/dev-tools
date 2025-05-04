@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+cd $HOME
+ln -si ~/git/dev-tools/dotfiles/.config/alacritty/alacritty.toml .config/alacritty/alacritty.toml
+ln -si ~/git/dev-tools/dotfiles/.config/zellij/config.kdl .config/zellij/config.kdl
+ln -si ~/git/dev-tools/dotfiles/.gemrc
+ln -si ~/git/dev-tools/dotfiles/.gitignore_global
