@@ -15,7 +15,7 @@ brew update
 brew upgrade
 rustup update
 if ! build_ruby; then
-  echo "\033[31mError: Failed to install Ruby version $RUBY_VERSION." >&2
+  echo "\033[31mError: Failed to install Ruby version $RUBY_VERSION.\033[0m" >&2
   exit 1
 fi
 rbenv rehash
