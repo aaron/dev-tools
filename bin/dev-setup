@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+brew install git
+brew install gh
+brew install --cask alacritty
+brew install --cask font-caskaydia-mono-nerd-font
+brew install zellij
