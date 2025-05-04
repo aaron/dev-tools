@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+for dir in */.git; do
+  repo="${dir%/.git}"
+  echo "\033[34m$repo\033[0m"
+  (cd "$repo" && git status -sb)
+done
