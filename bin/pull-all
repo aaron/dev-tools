@@ -5,4 +5,3 @@ for dir in */.git; do
   echo "Pulling in $repo..."
   (cd "$repo" && git pull)
 done
-
