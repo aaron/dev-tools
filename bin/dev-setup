@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 # Install Homebrew packages
+brew update
 brew install git
 brew install gh
 brew install lastpass-cli
