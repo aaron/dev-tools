@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# https://github.com/github/renaming?tab=readme-ov-file
 
 printf "Change master branch to main? (y/n): "
 read -r response
