@@ -11,3 +11,6 @@ brew install zellij
 # Add global git configs
 git config --global init.defaultBranch main
 git config --global pull.rebase false
+git config --global status.short true
+git config --global status.branch true
+git config --global alias.s status
