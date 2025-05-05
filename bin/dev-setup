@@ -14,3 +14,6 @@ git config --global pull.rebase false
 git config --global status.short true
 git config --global status.branch true
 git config --global alias.s status
+
+# Github CLI config
+gh alias set merge "pr merge --merge --delete-branch" --clobber
