@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+timestamp=$(date +%Y%m%d_%H%M%S)
+snapshot_dir="route53-snapshot-$timestamp"
+mkdir "$snapshot_dir"
+
+# List all hosted zone IDs
+zone_ids=$(aws route53 list-hosted-zones --query "HostedZones[].Id" --output text | sed 's|/hostedzone/||g')
+
+# Download records for each zone
+for zone_id in $zone_ids; do
+  zone_name=$(aws route53 get-hosted-zone --id "$zone_id" --query "HostedZone.Name" --output text)
+  aws route53 list-resource-record-sets --hosted-zone-id "$zone_id" > "$snapshot_dir/${zone_name}json"
+done
+
+echo "Snapshot complete: $snapshot_dir"
