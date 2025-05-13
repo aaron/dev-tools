@@ -11,7 +11,7 @@ padding.x = 16
 padding.y = 14
 
 [font]
-size=14
+size=16
 normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
 bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
 italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
