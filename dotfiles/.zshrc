@@ -16,7 +16,7 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Set EDITOR to Visual Studio Code
-export EDITOR="code -n"
+export EDITOR="nvim"
 
 # Shell prompt
 export PS1="%F{blue}%1~%f %# "

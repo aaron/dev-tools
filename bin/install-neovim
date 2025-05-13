@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+brew install neovim
+brew install prettier
+
+if [ ! -d "$HOME/.config/nvim" ]; then
+  # Install LazyVim
+  git clone https://github.com/LazyVim/starter ~/.config/nvim
+  rm -rf ~/.config/nvim/.git
+fi
+
+curl https://raw.githubusercontent.com/basecamp/omakub/master/themes/tokyo-night/neovim.lua \
+  -o ~/.config/nvim/lua/plugins/theme.lua
+curl https://raw.githubusercontent.com/basecamp/omakub/master/configs/neovim/snacks-animated-scrolling-off.lua \
+  -o ~/.config/nvim/lua/plugins/snacks-animated-scrolling-off.lua
