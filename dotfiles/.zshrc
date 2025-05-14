@@ -2,6 +2,9 @@
 # the following to ~/.zshrc:
 eval "$(rbenv init - zsh)"
 
+# Initialize zoxide
+eval "$(zoxide init zsh)"
+
 # Add dev-tools bin to path
 DEV_TOOLS_BIN="$(dirname $(cd "$(dirname "${(%):-%N}")" && pwd))/bin"
 export PATH="$DEV_TOOLS_BIN:$PATH"
