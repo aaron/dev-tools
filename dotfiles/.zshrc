@@ -52,7 +52,7 @@ alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
-alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias cd='z'
 
 # Directories
@@ -65,7 +65,7 @@ alias n='nvim'
 alias g='git'
 alias d='docker'
 alias r='rails'
-alias bat='batcat'
+alias bat='bat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 
