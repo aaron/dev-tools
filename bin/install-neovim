@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 brew install neovim
+brew install fd
 brew install prettier
 
 if [ ! -d "$HOME/.config/nvim" ]; then
