@@ -32,16 +32,16 @@ zstyle ":vcs_info:git:*" formats "%F{240}%b%f"
 zstyle ':vcs_info:*' enable git
 
 # Aliases
-alias be="bundle exec"
-alias c="clear"
-alias console="bin/rails console"
-alias db_reload="bin/rails db:drop;bin/rails db:create;bin/rails db:schema:load;bin/rails db:fixtures:load"
-alias fixtures="bin/rails db:fixtures:load"
-alias migrate="bin/rails db:migrate"
-alias paprika="open -n /Applications/Paprika\ Recipe\ Manager\ 3.app/"
-alias rc="bin/rubocop"
-alias rt="bin/rails test"
-alias rta="bin/rails test:all"
+alias be='bundle exec'
+alias c='clear'
+alias console='bin/rails console'
+alias db_reload='bin/rails db:drop;bin/rails db:create;bin/rails db:schema:load;bin/rails db:fixtures:load'
+alias fixtures='bin/rails db:fixtures:load'
+alias migrate='bin/rails db:migrate'
+alias paprika='open -n "/Applications/Paprika Recipe Manager 3.app/"'
+alias rc='bin/rubocop'
+alias rt='bin/rails test'
+alias rta='bin/rails test:all'
 alias rtc="rt;rc"
 
 # Enable Docker CLI completions
