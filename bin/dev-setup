@@ -9,6 +9,8 @@ brew install ripgrep
 brew install --cask alacritty
 brew install --cask font-caskaydia-mono-nerd-font
 brew install zellij
+brew install bat
+brew install lazygit
 
 # Add global git configs
 git config --global init.defaultBranch main
