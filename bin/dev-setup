@@ -11,6 +11,7 @@ brew install --cask font-caskaydia-mono-nerd-font
 brew install zellij
 brew install bat
 brew install lazygit
+brew install eza
 
 # Add global git configs
 git config --global init.defaultBranch main
