@@ -12,6 +12,8 @@ fi
 # Desktop & Dock - Tiled windows have margins: off
 defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
+# Desktop & Dock - Automatically rearrange Spaces based on most recent use: off
+defaults write com.apple.dock mru-spaces -bool false
+
 # Restart the dock to apply the changes
 killall Dock
-
