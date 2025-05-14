@@ -1,17 +1,19 @@
 #!/usr/bin/env sh
 
 # Install Homebrew packages
-brew update
-brew install git
-brew install gh
-brew install lastpass-cli
-brew install ripgrep
-brew install --cask alacritty
-brew install --cask font-caskaydia-mono-nerd-font
-brew install zellij
-brew install bat
-brew install lazygit
-brew install eza
+brew update -q
+brew install -q git
+brew install -q gh
+brew install -q lastpass-cli
+brew install -q ripgrep
+brew install -q --cask alacritty
+brew install -q --cask font-caskaydia-mono-nerd-font
+brew install -q zellij
+brew install -q bat
+brew install -q lazygit
+brew install -q lazydocker
+brew install -q eza
+brew install -q fzf
 
 # Add global git configs
 git config --global init.defaultBranch main
@@ -21,4 +23,6 @@ git config --global status.branch true
 git config --global alias.s status
 
 # Github CLI config
-gh alias set merge "pr merge --merge --delete-branch" --clobber
+gh alias set merge "pr merge --merge --delete-branch" --clobber >/dev/null
+
+echo "Dev setup complete!"
