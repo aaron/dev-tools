@@ -15,6 +15,7 @@ brew install -q lazydocker
 brew install -q eza
 brew install -q fzf
 brew install -q zoxide
+brew install -q wget
 
 # Add global git configs
 git config --global init.defaultBranch main
