@@ -5,6 +5,9 @@ eval "$(rbenv init - zsh)"
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
+# Enable vi mode
+bindkey -v
+
 # Add dev-tools bin to path
 DEV_TOOLS_BIN="$(dirname $(cd "$(dirname "${(%):-%N}")" && pwd))/bin"
 export PATH="$DEV_TOOLS_BIN:$PATH"
