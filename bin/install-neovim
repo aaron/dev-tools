@@ -1,11 +1,14 @@
 #!/usr/bin/env sh
 
-brew install neovim
-brew install fd
-brew install prettier
+brew install -q neovim
+brew install -q luarocks
+brew install -q fd
+brew install -q prettier
 
 if [ ! -d "$HOME/.config/nvim" ]; then
   # Install LazyVim
   git clone https://github.com/LazyVim/starter ~/.config/nvim
   rm -rf ~/.config/nvim/.git
 fi
+
+echo "Neovim setup complete!"
