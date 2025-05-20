@@ -27,6 +27,9 @@ export EDITOR="nvim"
 # Shell prompt
 export PS1="%F{blue}%1~%f %# "
 
+# Set bat theme
+export BAT_THEME="OneHalfDark"
+
 # Show git branch in right prompt
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 autoload -Uz vcs_info
