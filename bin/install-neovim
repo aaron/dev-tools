@@ -4,6 +4,7 @@ brew install -q neovim
 brew install -q luarocks
 brew install -q fd
 brew install -q prettier
+brew install -q ast-grep
 
 if [ ! -d "$HOME/.config/nvim" ]; then
   # Install LazyVim
