@@ -68,16 +68,18 @@ alias ....='cd ../../..'
 
 # Tools
 alias n='nvim'
-alias g='git'
 alias d='docker'
 alias r='rails'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 
 # Git
+alias g='git'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+alias gpa='git-pull-all'
+alias gsa='git-status-all'
 
 # Enable Docker CLI completions
 fpath=($HOME/.docker/completions $fpath)
