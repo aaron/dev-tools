@@ -71,7 +71,6 @@ alias n='nvim'
 alias g='git'
 alias d='docker'
 alias r='rails'
-alias bat='bat'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 
