@@ -14,9 +14,14 @@ source "$HOME/git/dev-tools/dotfiles/.zshrc"
 Symlink Dotfiles
 
 - `~/.config/alacritty/alacritty.toml`
+- `~/.config/nvim`
 - `~/.config/zellij/config.kdl`
 - `~/.gemrc`
 - `~/.gitignore_global`
+
+```sh
+ln -s dotfiles/.file/path ~/.file/path
+```
 
 ## Environment Setup
 
