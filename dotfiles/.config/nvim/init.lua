@@ -14,6 +14,11 @@ vim.api.nvim_create_user_command("ReloadChrome", function()
   }, { detach = true })
 end, {})
 
+-- Remove erb tags
+vim.api.nvim_create_user_command("RemoveErbTags", function()
+  vim.cmd([[%s/<%=\?\s*\|\s*%>//g]])
+end, {})
+
 -- Replace all single quotes with double quotes
 vim.api.nvim_create_user_command("QuoteSwap", function()
   vim.cmd([[%s/'/"/g]])
