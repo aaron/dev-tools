@@ -1,16 +1,17 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- Reload current Chrome tab
+-- Reload current browser tab
 vim.api.nvim_create_user_command("ReloadChrome", function()
   -- Save current buffer
   vim.cmd("write")
 
-  -- Reload Chrome
+  -- Reload browser page
   vim.fn.jobstart({
     "osascript",
     "-e",
-    'tell application "Google Chrome" to tell the active tab of its first window to reload',
+    -- 'tell application "Google Chrome" to tell the active tab of its first window to reload',
+    'tell application "Safari" to set URL of document 1 to URL of document 1',
   }, { detach = true })
 end, {})
 
