@@ -3,3 +3,11 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>r", ":ReloadChrome<CR>", { desc = "Reload Chrome tab" })
+
+vim.keymap.set("i", "<C-]>", function()
+  require("copilot.suggestion").accept_word()
+end, { desc = "Copilot Accept Word" })
+
+vim.keymap.set("i", "<C-\\>", function()
+  require("copilot.suggestion").accept_line()
+end, { desc = "Copilot Accept Line" })
