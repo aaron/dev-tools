@@ -26,7 +26,7 @@ git config --global alias.s status
 git config --global push.autoSetupRemote true
 
 # Github CLI config
-gh alias set merge "pr merge --merge --delete-branch" --clobber >/dev/null
+gh alias set merge '!gh pr merge --merge --delete-branch "$@" && git fetch --prune' --clobber >/dev/null
 gh alias set prc '!gh pr create -t "$(ruby -e '\''puts `git rev-parse --abbrev-ref HEAD`.tr("-", " ").capitalize'\'' )" -b ""' --clobber >/dev/null
 
 echo "Dev setup complete!"
