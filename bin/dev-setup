@@ -6,7 +6,7 @@ brew install -q git
 brew install -q gh
 brew install -q lastpass-cli
 brew install -q ripgrep
-brew install -q --cask alacritty
+# brew install -q --cask alacritty
 brew install -q --cask font-caskaydia-mono-nerd-font
 brew install -q zellij
 brew install -q bat
