@@ -1,6 +1,6 @@
 -- Allow auopairing inside treesitter string nodes
 return {
-  "echasnovski/mini.pairs",
+  "nvim-mini/mini.pairs",
   event = "VeryLazy",
   config = function()
     local opts = require("mini.pairs").config
