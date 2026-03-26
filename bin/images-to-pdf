@@ -20,7 +20,7 @@ if files.empty?
 end
 
 # Create PDF with name based on current directory
-current_dir_name = File.basename(Dir.pwd)
+current_dir_name = File.basename(Dir.pwd).gsub(/ +/, '-')
 pdf_file = "#{current_dir_name}.pdf"
 
 Prawn::Document.generate(pdf_file, page_size: 'LETTER') do |pdf|
