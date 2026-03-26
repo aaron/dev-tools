@@ -2,7 +2,7 @@
 # Script to create a PDF from numbered PNG images in the current directory.
 # Images are ordered by their number prefix and titled with the filename text.
 #
-# Usage: ruby images-to-pdf-ruby
+# Usage: ruby images-to-pdf
 # Dependencies: gem install prawn prawn-svg mini_magick
 
 require 'prawn'
@@ -15,7 +15,7 @@ files = Dir.glob('*.png').sort_by do |f|
 end
 
 if files.empty?
-  puts "No PNG files found in current directory"
+  puts 'No PNG files found in current directory'
   exit 1
 end
 
@@ -27,37 +27,36 @@ Prawn::Document.generate(pdf_file, page_size: 'LETTER') do |pdf|
   files.each_with_index do |img_file, index|
     # Add new page for images after the first
     pdf.start_new_page unless index.zero?
-    
+
     # Extract title from filename
-    title = img_file.sub(/^\d+\)\s*/, '')  # Remove number prefix
-    title = title.sub(/\.png$/i, '')        # Remove extension
-    
+    title = img_file.sub(/^\d+\)\s*/, '') # Remove number prefix
+    title = title.sub(/\.png$/i, '') # Remove extension
+
     # Get image dimensions
     img = MiniMagick::Image.open(img_file)
     img_width = img.width.to_f
     img_height = img.height.to_f
-    
+
     # Page dimensions (letter size in points: 612 x 792)
     page_width = pdf.bounds.width
     page_height = pdf.bounds.height
-    
-    # Calculate scaling to fit on page with margin
-    margin = 72  # 1 inch margin
+
+    # Calculate scaling to fit on page
     max_width = page_width
-    max_height = page_height - 50  # Extra space for title
-    
+    max_height = page_height - 50 # Extra space for title
+
     scale = [max_width / img_width, max_height / img_height, 1.0].min
     scaled_width = img_width * scale
     scaled_height = img_height * scale
-    
+
     # Add title at top
     pdf.font 'Helvetica', style: :bold, size: 16
     pdf.text title, align: :center
     pdf.move_down 20
-    
+
     # Add image centered
     x_offset = (page_width - scaled_width) / 2
-    pdf.image img_file, 
+    pdf.image img_file,
               at: [x_offset, pdf.cursor],
               width: scaled_width,
               height: scaled_height
