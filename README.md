@@ -15,6 +15,7 @@ Symlink Dotfiles
 
 - `~/.config/alacritty/alacritty.toml`
 - `~/.config/nvim`
+- `~/.config/rubocop/config.yml`
 - `~/.config/zellij/config.kdl`
 - `~/.gemrc`
 - `~/.gitignore_global`
