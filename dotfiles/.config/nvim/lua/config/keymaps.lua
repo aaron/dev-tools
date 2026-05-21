@@ -11,3 +11,11 @@ end, { desc = "Copilot Accept Word" })
 vim.keymap.set("i", "<C-\\>", function()
   require("copilot.suggestion").accept_line()
 end, { desc = "Copilot Accept Line" })
+
+vim.keymap.set("n", "<leader>j", function()
+  require("config.ruby_split_join").split_call()
+end, { desc = "Split Ruby call" })
+
+vim.keymap.set("n", "<leader>J", function()
+  require("config.ruby_split_join").join_call()
+end, { desc = "Join Ruby call" })
