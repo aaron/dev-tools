@@ -12,12 +12,6 @@ bindkey -v
 DEV_TOOLS_BIN="$(dirname $(cd "$(dirname "${(%):-%N}")" && pwd))/bin"
 export PATH="$DEV_TOOLS_BIN:$PATH"
 
-# Fix rails test errors
-# https://github.com/rails/rails/issues/38560
-# Try removing when ruby 3.2.0 is updated
-# Re-nabled for problems running parallel tests with ruby 3.4.2 on 4/10/25
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
 # Set EDITOR to Visual Studio Code
 export EDITOR="nvim"
 
