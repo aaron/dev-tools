@@ -12,9 +12,6 @@ bindkey -v
 DEV_TOOLS_BIN="$(dirname $(cd "$(dirname "${(%):-%N}")" && pwd))/bin"
 export PATH="$DEV_TOOLS_BIN:$PATH"
 
-# Add homebrew mysql to path
-export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
-
 # Fix rails test errors
 # https://github.com/rails/rails/issues/38560
 # Try removing when ruby 3.2.0 is updated
